@@ -1,3 +1,10 @@
+function parseTwitterDate(text) {
+var newtext = text.replace(/(\+\S+) (.*)/, '$2 $1');
+var date = new Date(Date.parse(newtext)).toLocaleDateString();
+var time = new Date(Date.parse(newtext)).toLocaleTimeString();
+return date + ' ' + time;
+}
+
 function dealWithResponses(response) {
     var twitterString = "";
     if (response) {
@@ -6,9 +13,8 @@ function dealWithResponses(response) {
         if (index > 3) {
           return;
         }
-        var date = new Date(tweet.created_at),
-          newClass = "odd",
-          pubDate = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();;
+        var pubDate = parseTwitterDate(tweet.created_at),
+          newClass = "odd";
         if (index%2 == 1) {
           newClass = "even";
         }
