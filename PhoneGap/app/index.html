@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cordova Device Ready Example</title>
+    
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/media.js"></script>
+    <script src="js/location.js"></script>
+    <script src="js/contacts.js"></script>
+    <script src="js/file.js"></script>
+  </head>
+  <body>
+    <div id="home" data-role="page">
+        <div data-role="header">
+            <h3>Home</h3>
+        </div>
+        <div data-role="content">
+            <a data-role="button" href="#" class="check-connection">Check Connection</a>
+            <a data-role="button" href="#" class="show-alert">Alert</a>
+            <a data-role="button" href="#" class="play-beep">Play Beep</a>
+            <a data-role="button" href="#" class="vibrate">Vibrate</a>
+            <a data-role="button" href="#" class="show-confirm">Show Confirm Box</a>
+        </div>
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="media" data-role="page">
+        <div data-role="header">
+            <h3>Capture Media</h3>
+        </div>
+        <div data-role="content">
+            <button class="capture-photo">Capture Photo</button> <br>
+            <button class="capture-editable">Capture Editable Photo</button> <br>
+            <button class="capture-library">From Photo Library</button><br>
+            <button class="capture-album">From Photo Album</button><br>
+            <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+            <img style="display:none;" id="largeImage" src="" />
+            <button class="capture-audio">Capture Audio</button> <br>
+            <button class="capture-video">Capture Video</button> <br>
+        </div>
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#media" class="ui-btn-active ui-state-persist">Media</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="location" data-role="page">
+        <div data-role="header">
+            <h3>Location</h3>
+        </div>
+        <div data-role="content">
+            <button class="geolocation">Get Current Location</button> <br>
+            <div id="geolocation"></div>
+
+            <button class="acceleration">Get Current Acceleration</button> <br>
+            <div id="acceleration"></div>
+
+            <button class="watch-acceleration">Watch Acceleration</button> <br>
+            <div id="watch-acceleration"></div>
+
+            <button class="clear-acceleration">Clear Acceleration</button> <br>
+        </div>
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#location" class="ui-btn-active ui-state-persist">Location</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="contacts" data-role="page">
+        <div data-role="header">
+            <h3>Contacts</h3>
+        </div>
+        <div data-role="content">
+            <button class="contact-create">Create Contact</button> <br>
+            <button class="contact-create-remove">Create and Remove Contact</button> <br>
+            <button class="contact-find">Find Contact</button> <br>
+
+        </div>
+        <div data-role="footer">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contacts" class="ui-btn-active ui-state-persist">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
